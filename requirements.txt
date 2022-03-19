@@ -1,0 +1,6 @@
+poisson-disc==0.2.1
+streamlit==1.7.0
+Shapely==1.8.1.post1
+pyfastnoiselite==0.0.4
+Cython==0.29.28
+numpy==1.22.3
