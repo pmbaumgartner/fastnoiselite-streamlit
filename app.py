@@ -1,16 +1,19 @@
-from flowfieldcy import FlowGrid, Particle, run_flowfield
-from pyfastnoiselite.pyfastnoiselite import FastNoiseLite, NoiseType
-import shapely.ops as ops
 import random
-import numpy as np
-import streamlit as st
-import shapely.geometry as geo
-from poisson_disc import Bridson_sampling
 from pathlib import Path
+
+import numpy as np
+import shapely.geometry as geo
+import shapely.ops as ops
+import streamlit as st
+from poisson_disc import Bridson_sampling
 from setuptools import sandbox
+
+from flowfieldcy import FlowGrid, Particle, run_flowfield
 
 if not list(Path().glob("*.so")):
     sandbox.run_setup("setup.py", ["build_ext", "--inplace"])
+
+from pyfastnoiselite.pyfastnoiselite import FastNoiseLite, NoiseType
 
 
 st.set_page_config(layout="wide")
