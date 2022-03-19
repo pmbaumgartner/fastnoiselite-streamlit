@@ -6,15 +6,13 @@ import shapely.geometry as geo
 import shapely.ops as ops
 import streamlit as st
 from poisson_disc import Bridson_sampling
+from pyfastnoiselite.pyfastnoiselite import FastNoiseLite, NoiseType
 from setuptools import sandbox
-
-from flowfieldcy import FlowGrid, Particle, run_flowfield
 
 if not list(Path().glob("*.so")):
     sandbox.run_setup("setup.py", ["build_ext", "--inplace"])
 
-from pyfastnoiselite.pyfastnoiselite import FastNoiseLite, NoiseType
-
+from flowfieldcy import FlowGrid, Particle, run_flowfield
 
 st.set_page_config(layout="wide")
 
